@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewCourseFragment" >
+
+    <include
+        android:id="@+id/appbarNewCourse"
+        layout="@layout/appbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbarNewCourse">
+
+        <EditText
+            android:id="@+id/courseNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/course_number_label"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/courseName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/course_name_label"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/courseNumber"
+            app:layout_constraintStart_toStartOf="@+id/courseNumber"
+            app:layout_constraintTop_toBottomOf="@+id/courseNumber" />
+
+        <EditText
+            android:id="@+id/creditHrs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/credit_hours_label"
+            android:inputType="none|number"
+            app:layout_constraintEnd_toEndOf="@+id/courseName"
+            app:layout_constraintStart_toStartOf="@+id/courseName"
+            app:layout_constraintTop_toBottomOf="@+id/courseName" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/course_grade_label"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/creditHrs"
+            app:layout_constraintTop_toBottomOf="@+id/creditHrs" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/creditHrs"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView">
+
+            <RadioButton
+                android:id="@+id/gradeA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/grade_a_label" />
+
+            <RadioButton
+                android:id="@+id/gradeB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/grade_b_label" />
+
+            <RadioButton
+                android:id="@+id/gradeC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/grade_c_label" />
+
+            <RadioButton
+                android:id="@+id/gradeD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/grade_d_label" />
+
+            <RadioButton
+                android:id="@+id/gradeF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/grade_f_label" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/submit_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/cancel_label"
+            app:layout_constraintEnd_toEndOf="@+id/submit"
+            app:layout_constraintTop_toBottomOf="@+id/submit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
